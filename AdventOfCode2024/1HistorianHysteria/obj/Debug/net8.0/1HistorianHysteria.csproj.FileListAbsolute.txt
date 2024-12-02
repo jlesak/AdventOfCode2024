@@ -1,0 +1,16 @@
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/1HistorianHysteria
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/1HistorianHysteria.deps.json
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/1HistorianHysteria.runtimeconfig.json
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/1HistorianHysteria.dll
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/1HistorianHysteria.pdb
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.GeneratedMSBuildEditorConfig.editorconfig
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.AssemblyInfoInputs.cache
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.AssemblyInfo.cs
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.csproj.CoreCompileInputs.cache
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.dll
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/refint/1HistorianHysteria.dll
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.pdb
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/1HistorianHysteria.genruntimeconfig.cache
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/obj/Debug/net8.0/ref/1HistorianHysteria.dll
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/Input.txt
+/Users/janlesak/Documents/Programming/AdventOfCode2024/AdventOfCode2024/1HistorianHysteria/bin/Debug/net8.0/TestInput.txt
