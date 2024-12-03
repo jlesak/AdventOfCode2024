@@ -1,4 +1,4 @@
-﻿var fileName = "input.txt";
+﻿var fileName = "Input.txt";
 
 var reports = File.ReadAllLines(fileName)
     .Select(line => line.Split(' ', StringSplitOptions.RemoveEmptyEntries)

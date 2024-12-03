@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1HistorianHysteria", "1Hist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2Red-NosedReports", "2Red-NosedReports\2Red-NosedReports.csproj", "{1D86BF12-475F-47FD-AC70-F4827BA1EB52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3MullItOver", "3MullItOver\3MullItOver.csproj", "{32A52D7C-1B98-4CDF-A25F-4AEBC9BD528D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1D86BF12-475F-47FD-AC70-F4827BA1EB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D86BF12-475F-47FD-AC70-F4827BA1EB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D86BF12-475F-47FD-AC70-F4827BA1EB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A52D7C-1B98-4CDF-A25F-4AEBC9BD528D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A52D7C-1B98-4CDF-A25F-4AEBC9BD528D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A52D7C-1B98-4CDF-A25F-4AEBC9BD528D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A52D7C-1B98-4CDF-A25F-4AEBC9BD528D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
