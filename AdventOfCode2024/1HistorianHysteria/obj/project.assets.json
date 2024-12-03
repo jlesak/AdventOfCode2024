@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net9.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net9.0": []
   },
   "packageFolders": {
     "/Users/janlesak/.nuget/packages/": {}
@@ -23,17 +23,15 @@
         "/Users/janlesak/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {},
-        "https://artifactory.skoda.vwgroup.com/artifactory/api/nuget/dotnet-netcc-nuget-shared/": {},
-        "https://artifactory.skoda.vwgroup.com/artifactory/api/nuget/v3/dotnet-netcc-nuget-shared/index.json": {},
-        "https://devops.skoda.vwgroup.com/projects/EOM-7/_packaging/Packages/nuget/v3/index.json": {}
+        "https://artifactory.skoda.vwgroup.com/artifactory/api/nuget/dotnet-netcc-nuget-shared": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -45,12 +43,12 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -67,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/janlesak/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
