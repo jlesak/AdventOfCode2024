@@ -1,16 +1,22 @@
 ﻿using System.Text.RegularExpressions;
+using _3MullItOver;
+using BenchmarkDotNet.Running;
 
 const string FileName = "Input.txt";
+
+// var benchmark = BenchmarkRunner.Run<MemoryProcessingBenchmarks>();
 
 var fileStream = File.OpenRead(FileName);
 var reader = new StreamReader(fileStream);
 var memoryContent = await reader.ReadToEndAsync();
 
 var part1Result = RegexPart1(memoryContent);
-var part2Result = RegexPart2(memoryContent);
+
+var part2ResultOriginal = RegexPart2(memoryContent);
+var part2ResultNew = ProcessMemoryPart2Optimized(memoryContent);
 
 Console.WriteLine($"Part1 Result: {part1Result}");
-Console.WriteLine($"Part2 Result: {part2Result}");
+Console.WriteLine($"Part2 Result: {part2ResultNew}");
 
 return;
 
@@ -29,7 +35,7 @@ static int RegexPart1(string inputContent)
     return totalSum;
 }
 
-static int RegexPart2(string inputContent)
+int RegexPart2(string inputContent)
 {
     const string DoStatement = "do()";
     const string DoStatementRegex = @"do\(\)";
@@ -62,7 +68,7 @@ static int RegexPart2(string inputContent)
                 doMultiplication = true;
                 continue;
         }
-
+        
         if (!doMultiplication)
         {
             continue;
@@ -72,4 +78,95 @@ static int RegexPart2(string inputContent)
     }
     
     return totalSum;
+}
+
+int ProcessMemoryPart2Optimized(string input)
+{
+    var sum = 0;
+    var span = input.AsSpan();
+    var isEnabled = true;
+    var position = 0;
+    
+    while (position < span.Length)
+    {
+        if (span[position..].StartsWith("do()"))
+        {
+            isEnabled = true;
+            position += 4;
+            continue;
+        }
+            
+        if (span[position..].StartsWith("don't()"))
+        {
+            isEnabled = false;
+            position += 7;
+            continue;
+        }
+            
+        if (isEnabled && span[position..].StartsWith("mul("))
+        {
+            var result = TryParseMultiplication(span[position..], out var multiplierSpan);
+            if (result.isValid)
+            {
+                sum += result.product;
+                position += multiplierSpan;
+                continue;
+            }
+        }
+            
+        position++;
+    }
+    
+    return sum;
+}
+
+static (bool isValid, int product, int length) TryParseMultiplication(ReadOnlySpan<char> span, out int consumedLength)
+{
+    consumedLength = 0;
+    // Check minimum length for "mul(x,y)"
+    if (span.Length < 7) return (false, 0, 0);
+
+    // Skip "mul("
+    var pos = 4;
+        
+    // Parse first number
+    var firstNumberStart = pos;
+    while (pos < span.Length && char.IsDigit(span[pos])) pos++;
+        
+    if (pos == firstNumberStart || pos - firstNumberStart > 3) 
+        return (false, 0, 0);
+
+    if (pos >= span.Length || span[pos] != ',') 
+        return (false, 0, 0);
+
+    var firstNumber = ParseIntSpan(span.Slice(firstNumberStart, pos - firstNumberStart));
+        
+    // Skip comma
+    pos++;
+        
+    // Parse second number
+    var secondNumberStart = pos;
+    while (pos < span.Length && char.IsDigit(span[pos])) pos++;
+        
+    if (pos == secondNumberStart || pos - secondNumberStart > 3) 
+        return (false, 0, 0);
+
+    if (pos >= span.Length || span[pos] != ')') 
+        return (false, 0, 0);
+
+    var secondNumber = ParseIntSpan(span.Slice(secondNumberStart, pos - secondNumberStart));
+        
+    // Include closing parenthesis in consumed length
+    consumedLength = pos + 1;
+    return (true, firstNumber * secondNumber, pos + 1);
+}
+
+static int ParseIntSpan(ReadOnlySpan<char> span)
+{
+    var result = 0;
+    foreach (var c in span)
+    {
+        result = result * 10 + (c - '0');
+    }
+    return result;
 }
